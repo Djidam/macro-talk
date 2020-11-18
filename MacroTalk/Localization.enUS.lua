@@ -1,0 +1,15 @@
+MacroTalk_Locals = {
+	["/group"] = "/group",
+	["/gr"] = "/gr",
+	["/tellunit"] = "/tellunit",
+	["/whisperunit"] = "/whisperunit",
+	["/tu"] = "/tu",
+	["/wu"] = "/wu",
+	["/opt"] = "/opt",
+	["/rnd"] = "/rnd",
+	["/rndcmd"] = "/rndcmd",
+	["<no %s>"] = "<no %s>",
+	["gender"] = "gender",
+	["guild"] = "guild",
+	["You cannot use %s with /opt or /rnd."] = "You cannot use %s with /opt or /rnd.",
+}

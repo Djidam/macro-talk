@@ -1,0 +1,6 @@
+## Interface: 70200
+## Title: CogsUtils
+## Notes: Some utility functions common to my addons
+## Author: Cogwheel
+
+CogsUtils.lua
