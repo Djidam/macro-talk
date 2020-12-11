@@ -77,7 +77,8 @@ Straight substitutions:
 %z - Your current zone
 %sz - Your current sub-zone
 %loc - Your map coordinates
-%wp - Create a waypoint with your map coordinates and show the link
+%wp - Link a pin to your current location and then remove it
+%pin - Link a pin you've manually added to the map
 
  Unit information:
 
@@ -127,11 +128,13 @@ Sample result: I'm a level 68, male, gnome warrior.
 
 Changes:
 
-v2.4.1b
+v2.4.2
 - TOC updated
-- %wp only shares an existing pin now
+- Reworked of %wp command
+- Added %pin command
+- Added %wp and %wp to lists of commands with /mtk
 
-v2.4
+v2.4.1
 - TOC updated
 - Fixed /rnd command (thanks to NukeninRB)
 - Added straight substition %wp to link your position in a waypoint in chat (thanks to Elvenbane)
@@ -171,7 +174,7 @@ v2.3.0
 - Beta version for Battle for Azeroth
 - Removed %ma, %mab, %mp and %mpb because the functions UnitMana and UnitManaMax no longer exist.
 - Added %pw, %pwb, %pwp, %pwpb toe replace %ma etc. Will display the power, and depending on the unit, it will be mana, energy, focus, rage, lunar and so on.
-- The player coordinates are broken due to changes to the map UI. Untill bli² release a doc, the functionnality is disabled.
+- The player coordinates are broken due to changes to the map UI. Untill bliÂ² release a doc, the functionnality is disabled.
 
 v2.2.4
 - TOC updated
