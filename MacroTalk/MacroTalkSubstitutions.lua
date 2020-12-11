@@ -43,6 +43,7 @@ local subsBase = {
 			return ""
 		end
 	end,
+	
 	["%%[Pp][Ii][Nn]"] = function()
 		local mapID = C_Map.GetBestMapForUnit("player")
 		if mapID == nil then
