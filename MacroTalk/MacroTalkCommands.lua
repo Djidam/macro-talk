@@ -13,6 +13,7 @@ SlashCmdList["MACROTALK"] = function(text)
 		print(" - subs straight")
 		print(" - subs unit")
 		print(" - subs suffix")
+		print(" - clear waypoint")
 	elseif (text == 'tellunit') then
 		print("MacroTalk - TellUnit : ")
 		print(" - (/tu, /whisperunit, /wu) {unit} {message}")
@@ -106,6 +107,10 @@ SlashCmdList["MACROTALK"] = function(text)
 		print(" # icb - Raid icon (blank if no icon)")
 		print(" # gn - Raid group number - Only if target is in the same raid as you, or you are in a raid")
 		print(" # gnb - Raid group number (blank if no raid group)")
+	elseif (text == "clear waypoint") then
+		print(" MacroTalk - Clear WayPoint :")
+		print(" # MacroTalk added a command to allow you to clear your WayPoint easilly.")
+		print(" # Use /clearwaypoint or /cwp to do the trick.")
 	else
 		print("Macrotalk usage : (use help for more commands)")
 		print(" - TellUnit : (/tu, /whisperunit, /wu) {unit} {message}")
@@ -115,11 +120,23 @@ SlashCmdList["MACROTALK"] = function(text)
 		print(" - Conditional chat commands like /optsay : (/opt + chat command) [options] {text}; [options] {text}; ...")
 		print(" - Random chat commands like /rndyell : (/rnd + chat command) [options] {text}; [options] {text}; ...")
 		print(" - Substitutions : ")
-		print("  ° Straight : %n, %z, %sz, %loc")
+		print("  ° Straight : %n, %z, %sz, %loc, %wp, %pin")
 		print("  ° Unit : %t, %f, %m, %p, %tt")
 		print("  ° Suffixes : l, c, g, r, gu, rm, h, hp, pw, pwp, ic, gn")
+		print(" - Clearing a waypoint/pin : /clearwaypoint or /cwp")
 	end	
 end
+
+
+--[[ /clearwaypoint or /cwp ]]
+SLASH_CLEAR_WAYPOINT1,SLASH_CLEAR_WAYPOINT2 = '/clearwaypoint','/cwp';
+SlashCmdList["CLEAR_WAYPOINT"] = function()
+	if C_Map.GetUserWaypoint() ~= nil then
+		C_Map.ClearUserWaypoint()
+		print("waypoint cleared")
+	end
+end
+
 
 
 --[[ /group ]]
