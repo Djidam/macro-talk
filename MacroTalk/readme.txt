@@ -130,7 +130,7 @@ Changes:
 
 v2.4.2
 - TOC updated
-- Reworked of %wp command
+- Reworked of %wp command with the help of Bobins666
 - Added %pin command
 - Added %wp and %wp to lists of commands with /mtk
 
