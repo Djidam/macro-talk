@@ -28,24 +28,39 @@ local subsBase = {
 	end,
 	
 	["%%[Ww][Pp]"] = function()
-		-- local mapID = C_Map.GetBestMapForUnit("player")
-		-- if mapID == nil then
-			-- return;
-		-- end
-		-- local position = C_Map.GetPlayerMapPosition(mapID,"player")
-		-- if not position then
-			-- return;
-		-- end
-		-- C_Map.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(mapID,position:GetXY()));
+		local mapID = C_Map.GetBestMapForUnit("player")
+		if mapID == nil then
+			return;
+		end
+		local position = C_Map.GetPlayerMapPosition(mapID,"player")
+		if not position then
+			return;
+		end
 		if C_Map.GetUserWaypointHyperlink() == nil then
-			return "<no pin>";
+			C_Map.SetUserWaypoint(UiMapPoint.CreateFromCoordinates(mapID,position:GetXY()))
+			return C_Map.GetUserWaypointHyperlink(), C_Map.ClearUserWaypoint()
+		else
+			return ""
+		end
+	end,
+	["%%[Pp][Ii][Nn]"] = function()
+		local mapID = C_Map.GetBestMapForUnit("player")
+		if mapID == nil then
+			return;
+		end
+		local position = C_Map.GetPlayerMapPosition(mapID,"player")
+		if not position then
+			return;
+		end
+		if C_Map.GetUserWaypointHyperlink() == nil then
+			return ""
 		else
 			return C_Map.GetUserWaypointHyperlink()
 		end
 	end,
 	
 	--[[
-	Until an interface is in place, you can add straight text substitutions
+	You can add straight text substitutions
 	to this table. See the example below. Remove the -- from the front to use
 	it. Note also that it's case sensitive unless you write both upper- and
 	lower-case letters inside brackets like the substitutions above.]]
