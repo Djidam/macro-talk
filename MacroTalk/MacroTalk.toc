@@ -1,6 +1,6 @@
 ## Interface: 90002
 ## Title: MacroTalk
-## Version : 2.4.1b - Only shares an existing pin
+## Version : 2.4.2
 ## Notes: Adds helpful chat features for macros
 ## Notes-frFR : Ajoute des commandes de macros utiles
 ## Author: Cogwheel, Djidam
