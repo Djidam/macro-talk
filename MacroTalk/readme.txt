@@ -67,6 +67,12 @@ Example :
 I wish I could go outside right now \ Must... Leave... Building...[/i]
 
 
+Clearing WayPoint/Pin command
+
+MacroTalk added a command to allow you to clear your WayPoint easilly.
+Use /clearwaypoint or /cwp to do the trick."
+
+
 Text substitutions
 
 MacroTalk offers a variety of substitutions in addition to %t of the default UI. Substitutions are prioritized by the length of the code; longer codes are processed first. This means that %tl will be processed before %t. The codes are case-insensitive so %Tl is equivalent to %tL.
@@ -133,6 +139,7 @@ v2.4.2
 - Reworked of %wp command with the help of Bobins666
 - Added %pin command
 - Added %wp and %wp to lists of commands with /mtk
+- Added a /clearwaypoint or /cwp to clear waypoint/pin from the map
 
 v2.4.1
 - TOC updated
