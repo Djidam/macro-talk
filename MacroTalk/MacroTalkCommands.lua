@@ -76,6 +76,8 @@ SlashCmdList["MACROTALK"] = function(text)
 		print(" # %z - Your current zone")
 		print(" # %sz - Your current sub-zone (or zone if no sub-zone)")
 		print(" # %loc - Your map coordinates")
+		print(" # %wp - Link a pin to your current location and then remove it")
+		print(" # %pin - Link a pin you've manually added to the map")
 	elseif (text == 'subs unit') then
 		print("MacroTalk - Substitutions - Unit information : ")
 		print(" # %t - Name of your target (built in, but listed for consistency)")
